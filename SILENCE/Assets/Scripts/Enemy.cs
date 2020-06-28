@@ -7,19 +7,28 @@ using System;
 public class Enemy : MonoBehaviour
 {
     
-    [SerializeField] Player player;
     [SerializeField] float hitPoints = 10f;
 
     [Header("Score")]
     [SerializeField] int scoreValue = 100;
 
     GameSession gameSession;
+    Player player;
+    //BeatCounter beatCounter;
 
     // Start is called before the first frame update
     void Start()
     {
         gameSession = FindObjectOfType<GameSession>();
+        player = FindObjectOfType<Player>();
+        //AddToBeatCounterObservers();
     }
+
+    //private void AddToBeatCounterObservers()
+    //{
+    //    beatCounter = GetComponentInParent<BeatCounter>();
+    //    beatCounter.observers[beatCounter.observers.Length] = 
+    //}
 
     // Update is called once per frame
     void Update()
