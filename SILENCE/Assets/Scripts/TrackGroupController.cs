@@ -29,7 +29,7 @@ public class TrackGroupController : MonoBehaviour
     void Start()
     {
         tracks = GetComponentsInChildren<AudioSource>();
-        tracksPlaying = false;
+        tracksPlaying = true;
         //FadeIn = FadeMixerGroup.StartFade(audioMixer, exposedVolumeParameter, fadeDuration, trackGroupVolume);
         //FadeOut = FadeMixerGroup.StartFade(audioMixer, exposedVolumeParameter, fadeDuration, 0);
         beatCounter = GetComponentInChildren<BeatCounter>();
@@ -43,7 +43,7 @@ public class TrackGroupController : MonoBehaviour
         //Update enemies array with all active enemies in this group
         enemies = GetComponentsInChildren<Enemy>();
 
-        UpdateBeatCounterObservers();
+        //UpdateBeatCounterObservers();
 
         FadeCheck();
     }
