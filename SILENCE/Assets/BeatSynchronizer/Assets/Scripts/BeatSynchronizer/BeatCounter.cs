@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using SynchronizerData;
+using System.Collections.Generic;
 
 /// <summary>
 /// This class is responsible for counting and notifying its observers when a beat occurs, specified by beatValue.
@@ -17,7 +18,8 @@ public class BeatCounter : MonoBehaviour {
 	public BeatType beatType = BeatType.OnBeat;
 	public float loopTime = 30f;
 	public AudioSource audioSource;
-	public GameObject[] observers;
+    //public GameObject[] observers;
+    public List<GameObject> observers;
 	
 	private float nextBeatSample;
 	private float samplePeriod;
@@ -43,12 +45,28 @@ public class BeatCounter : MonoBehaviour {
 		nextBeatSample = 0f;
 	}
 
-	/// <summary>
-	/// Initializes and starts the coroutine that checks for beat occurrences. The nextBeatSample field is initialized to 
-	/// exactly match up with the sample that corresponds to the time the audioSource clip started playing (via PlayScheduled).
-	/// </summary>
-	/// <param name="syncTime">Equal to the audio system's dsp time plus the specified delay time.</param>
-	void StartBeatCheck (double syncTime)
+    public void AddObjectToObservers(GameObject newObserver)
+    {
+        observers.Add(newObserver);
+    }
+
+    private void Update()
+    {
+        foreach (GameObject observer in observers)
+        {
+            if (!observer)
+            {
+                observers.Remove(observer);
+            }
+        }
+    }
+
+    /// <summary>
+    /// Initializes and starts the coroutine that checks for beat occurrences. The nextBeatSample field is initialized to 
+    /// exactly match up with the sample that corresponds to the time the audioSource clip started playing (via PlayScheduled).
+    /// </summary>
+    /// <param name="syncTime">Equal to the audio system's dsp time plus the specified delay time.</param>
+    void StartBeatCheck (double syncTime)
 	{
 		nextBeatSample = (float)syncTime * audioSource.clip.frequency;
 		StartCoroutine(BeatCheck());

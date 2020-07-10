@@ -9,6 +9,8 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField] float minSpawnDelay = 1f;
     [SerializeField] float maxSpawnDelay = 5f;
 
+    [SerializeField] BeatCounter beatCounter;
+
     IEnumerator Start()
     {
         while (spawn)
@@ -35,5 +37,8 @@ public class EnemySpawner : MonoBehaviour
                     Instantiate(enemy, transform.position, Quaternion.identity)
                     as Enemy;
         newEnemy.transform.parent = transform;
+
+        Debug.Log(newEnemy.ToString());
+        beatCounter.AddObjectToObservers(newEnemy.gameObject);
     }
 }

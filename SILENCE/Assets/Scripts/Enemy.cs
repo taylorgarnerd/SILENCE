@@ -14,7 +14,7 @@ public class Enemy : MonoBehaviour
 
     GameSession gameSession;
     Player player;
-    //BeatCounter beatCounter;
+    BeatCounter beatCounter;
 
     // Start is called before the first frame update
     void Start()
@@ -27,7 +27,7 @@ public class Enemy : MonoBehaviour
     //private void AddToBeatCounterObservers()
     //{
     //    beatCounter = GetComponentInParent<BeatCounter>();
-    //    beatCounter.observers[beatCounter.observers.Length] = 
+    //    beatCounter.AddObjectToObservers(this.gameObject);
     //}
 
     // Update is called once per frame

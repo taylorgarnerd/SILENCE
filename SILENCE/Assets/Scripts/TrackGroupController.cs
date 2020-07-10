@@ -44,6 +44,7 @@ public class TrackGroupController : MonoBehaviour
         enemies = GetComponentsInChildren<Enemy>();
 
         //UpdateBeatCounterObservers();
+        //This time i may need to check for *NEW* enemies each update and then add them to the observers
 
         FadeCheck();
     }
