@@ -93,9 +93,9 @@ GameObject:
   - component: {fileID: 6542438668516858599}
   - component: {fileID: 1930692162314575719}
   - component: {fileID: 1930692162314575718}
-  - component: {fileID: 1930692162314575716}
   - component: {fileID: 1930692162314575717}
   - component: {fileID: 7743040429522609943}
+  - component: {fileID: 2095411655}
   m_Layer: 8
   m_Name: Drums Enemy
   m_TagString: Enemy
@@ -130,8 +130,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 847d1f57dede1d24a98066e262faa478, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hitPoints: 10
-  scoreValue: 100
+  hitPoints: 60
+  scoreValue: 50
 --- !u!114 &6542438668516858599
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -193,22 +193,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.28370914, y: 0.2930074}
   m_EdgeRadius: 0
---- !u!114 &1930692162314575716
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6542438668516858597}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1ffaa0592f5a9774db97e1631971e0f9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  laserPrefab: {fileID: 9015572667588630951, guid: b8715d67878bef246818e0c915fb1f23,
-    type: 3}
-  projectileSpeed: 5
-  projectileFiringPeriod: 10
 --- !u!114 &1930692162314575717
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -235,4 +219,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   indestructible: 1
-  damage: 50
+  damage: 200
+--- !u!114 &2095411655
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6542438668516858597}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24fe6479bae4f65449c5a73d8d9d2448, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  forceFieldPrefab: {fileID: 9015572667588630951, guid: 54251a179bf0f5148967a8420114758d,
+    type: 3}
+  forceFieldActivateTime: 1

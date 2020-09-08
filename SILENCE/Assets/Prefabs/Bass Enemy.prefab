@@ -130,7 +130,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 847d1f57dede1d24a98066e262faa478, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hitPoints: 10
+  hitPoints: 30
   scoreValue: 100
 --- !u!114 &7672215696433152250
 MonoBehaviour:
@@ -205,10 +205,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ffaa0592f5a9774db97e1631971e0f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  laserPrefab: {fileID: 9015572667588630951, guid: b8715d67878bef246818e0c915fb1f23,
+  laserPrefab: {fileID: 9015572667588630951, guid: 4412ed1ec64b00d4980917fcd7c77565,
     type: 3}
   projectileSpeed: 3
-  projectileFiringPeriod: 10
 --- !u!114 &7672215696433152253
 MonoBehaviour:
   m_ObjectHideFlags: 0

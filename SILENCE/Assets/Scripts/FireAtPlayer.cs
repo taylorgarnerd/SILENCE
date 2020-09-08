@@ -8,7 +8,7 @@ public class FireAtPlayer : MonoBehaviour
     [Header("Projectile")]
     [SerializeField] GameObject laserPrefab;
     [SerializeField] float projectileSpeed = 5f;
-    [SerializeField] float projectileFiringPeriod = 10f;
+    //[SerializeField] float projectileFiringPeriod = 10f;
 
     private BeatObserver beatObserver;
     private SpriteRenderer enemyBody;

@@ -50,8 +50,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 847d1f57dede1d24a98066e262faa478, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hitPoints: 10
-  scoreValue: 100
+  hitPoints: 15
+  scoreValue: 200
 --- !u!114 &6851018715396923130
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -107,7 +107,6 @@ MonoBehaviour:
   laserPrefab: {fileID: 9015572667588630951, guid: b8715d67878bef246818e0c915fb1f23,
     type: 3}
   projectileSpeed: 5
-  projectileFiringPeriod: 10
 --- !u!50 &3651060086415084920
 Rigidbody2D:
   serializedVersion: 4
